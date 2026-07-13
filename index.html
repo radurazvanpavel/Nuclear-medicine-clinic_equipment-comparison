@@ -49,7 +49,7 @@ h1,h2,h3{font-family:'Red Hat Display',sans-serif;color:var(--primary)}
 /* hero */
 .hero{padding:36px 0 28px;border-bottom:3px solid var(--primary);position:relative}
 .hero .hero-logo{position:absolute;top:36px;right:0;height:52px;width:auto;opacity:.95}
-body.force-mobile .hero .hero-logo{height:38px}
+body.narrow .hero .hero-logo{display:none}
 .eyebrow{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--secondary);border:1px solid var(--secondary);border-radius:999px;padding:4px 12px;margin-bottom:18px}
 .hero h1{font-size:clamp(26px,4.5vw,44px);font-weight:900;line-height:1.12;margin-bottom:14px}
 .hero p.sub{font-size:16px;color:#4a4560}
@@ -82,14 +82,16 @@ section{padding:34px 0 8px}
 
 /* package chart */
 .chart{margin-top:10px}
-.bar-row{display:grid;grid-template-columns:96px minmax(210px,360px) 1fr 108px 104px 92px;gap:14px;align-items:center;padding:10px 0;border-bottom:1px dashed var(--line);font-size:13.5px}
+.bar-row{display:grid;grid-template-columns:112px minmax(200px,350px) 1fr 108px 104px 92px;gap:14px;align-items:center;padding:10px 0;border-bottom:1px dashed var(--line);font-size:13.5px}
 .bar-tier{font-family:'Red Hat Display';font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;text-align:center;border-radius:8px;padding:5px 6px;background:#F1EDFB;color:var(--primary);white-space:nowrap}
 .bar-tier.hi{background:var(--primary);color:#fff}
 .bar-row:last-child{border-bottom:none}
-.bar-row.bar-head{border-bottom:2px solid var(--line);padding:6px 0;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#6c6784}
+.bar-row.bar-head{border-bottom:2px solid var(--line);padding:6px 0;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#6c6784;white-space:nowrap;align-items:end}
+.bar-row.bar-head div:first-child{text-align:center}
 .bar-models{display:block;line-height:1.35}
-body.force-mobile .bar-row{grid-template-columns:1fr;gap:3px}
-body.force-mobile .bar-head{display:none}
+body.narrow .bar-row{grid-template-columns:1fr;gap:3px}
+body.narrow .bar-head{display:none}
+body.narrow .bar-tier{justify-self:start;padding:4px 10px}
 .bar-name{font-weight:500}
 .bar-track{background:var(--line);border-radius:999px;height:16px;position:relative;overflow:hidden}
 .bar-fill{height:100%;border-radius:999px;background:var(--secondary)}
@@ -97,7 +99,7 @@ body.force-mobile .bar-head{display:none}
 .bar-val{text-align:left;font-variant-numeric:tabular-nums;font-weight:500;white-space:nowrap}
 .bar-delta{text-align:left;font-variant-numeric:tabular-nums;white-space:nowrap}
 .bar-pct{text-align:left;font-variant-numeric:tabular-nums;font-weight:700;white-space:nowrap}
-body.force-mobile .bar-val{text-align:left}
+body.narrow .bar-val{text-align:left}
 .delta-pos{color:var(--pos);font-weight:700}
 .delta-neg{color:var(--neg);font-weight:700}
 .budget-line{font-size:13px;margin:6px 0 16px;color:#6c6784}
@@ -116,7 +118,7 @@ tr.price-row td{background:#F6F3FC;font-weight:700}
 
 /* pros / cons */
 .pc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-bottom:12px}
-body.force-mobile .pc-grid{grid-template-columns:1fr}
+body.narrow .pc-grid{grid-template-columns:1fr}
 .pc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
 .pc-card.uih{border:1.5px solid var(--accent)}
 .pc-card h4{font-family:'Red Hat Display';font-size:15px;color:var(--primary);margin-bottom:10px}
@@ -169,6 +171,24 @@ footer{margin-top:50px;padding-top:18px;border-top:1px solid var(--line);font-si
 .gate-err{display:none;color:var(--neg);font-size:12.5px;margin-top:10px;font-weight:700}
 body.locked{overflow:hidden}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}#app{transition:none}}
+
+/* ── desktop presentation scale: larger everything for screen-share ── */
+@media(min-width:900px){
+  body:not(.force-mobile){zoom:1.18}
+}
+
+/* ── narrow layout: no horizontal scrolling anywhere ── */
+body.narrow .tabbar{flex-wrap:wrap;overflow-x:visible;row-gap:6px}
+body.narrow .table-scroll{overflow:visible;border:none;background:transparent}
+body.narrow table{min-width:0;display:block;border-collapse:separate}
+body.narrow thead{display:none}
+body.narrow tbody{display:block}
+body.narrow tbody tr{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin-bottom:10px}
+body.narrow tbody tr.price-row{background:#F6F3FC;border-color:var(--secondary)}
+body.narrow tbody tr td{display:block;width:100%;border:none;padding:2px 0;white-space:normal}
+body.narrow td.rowlabel{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--secondary);padding-bottom:6px;white-space:normal}
+body.narrow td[data-v]::before{content:attr(data-v);display:block;font-weight:700;font-size:12px;color:var(--primary)}
+body.narrow td[data-v]{padding:6px 0;border-top:1px dashed var(--line)}
 </style>
 </head>
 <body class="locked">
@@ -227,7 +247,7 @@ ro: {
   pkgLead:'Valoarea totală a fiecărei configurații complete (PET-CT + CT + RM + mamograf), raportată la bugetul CAPEX. Calculele exclud HotLab-ul (205.700 EUR, dedus din oferte).',
   budgetLbl:'Buget CAPEX de referință:',
   deltaLbl:'Diferență',
-  pkgColCfg:'Configurație CT', pkgColName:'Pachet', pkgColVal:'Valoare', pkgColDelta:'Diferență', pkgColPct:'% vs CAPEX',
+  pkgColCfg:'Nivel config.', pkgColName:'Pachet', pkgColVal:'Valoare', pkgColDelta:'Diferență', pkgColPct:'% vs CAPEX',
   pkgNote:'Configurațiile bazate pe GE Discovery IQ au fost eliminate — sistemul a ieșit din producție. Fiecare pachet include RM 1.5T și mamograful furnizorului respectiv.',
   petTag:'1 · PET-CT', ctTag:'2 · CT', mrTag:'3 · RM 1.5T', mgTag:'4 · Mamograf',
   proLbl:'Puncte forte', conLbl:'Puncte slabe',
@@ -372,7 +392,7 @@ en: {
   pkgLead:'Total value of each complete configuration (PET-CT + CT + MRI + mammography) against the CAPEX budget. Figures exclude the HotLab (€205,700, already deducted from the offers).',
   budgetLbl:'Reference CAPEX budget:',
   deltaLbl:'Difference',
-  pkgColCfg:'CT configuration', pkgColName:'Package', pkgColVal:'Value', pkgColDelta:'Difference', pkgColPct:'% vs CAPEX',
+  pkgColCfg:'Config. level', pkgColName:'Package', pkgColVal:'Value', pkgColDelta:'Difference', pkgColPct:'% vs CAPEX',
   pkgNote:'Configurations based on the GE Discovery IQ have been removed — the system has been discontinued. Each package includes the respective vendor\u2019s 1.5T MRI and mammography system.',
   petTag:'1 · PET-CT', ctTag:'2 · CT', mrTag:'3 · 1.5T MRI', mgTag:'4 · Mammography',
   proLbl:'Strengths', conLbl:'Weaknesses',
@@ -517,7 +537,7 @@ fr: {
   pkgLead:'Valeur totale de chaque configuration complète (TEP-TDM + scanner + IRM + mammographe) par rapport au budget CAPEX. Les calculs excluent le HotLab (205 700 €, déjà déduit des offres).',
   budgetLbl:'Budget CAPEX de référence :',
   deltaLbl:'Écart',
-  pkgColCfg:'Configuration CT', pkgColName:'Package', pkgColVal:'Valeur', pkgColDelta:'Écart', pkgColPct:'% vs CAPEX',
+  pkgColCfg:'Niveau config.', pkgColName:'Package', pkgColVal:'Valeur', pkgColDelta:'Écart', pkgColPct:'% vs CAPEX',
   pkgNote:'Les configurations basées sur le GE Discovery IQ ont été retirées — le système est sorti de production. Chaque package inclut l\u2019IRM 1,5 T et le mammographe du fournisseur respectif.',
   petTag:'1 · TEP-TDM', ctTag:'2 · Scanner', mrTag:'3 · IRM 1,5 T', mgTag:'4 · Mammographe',
   proLbl:'Points forts', conLbl:'Points faibles',
@@ -692,7 +712,7 @@ function render(){
       const bodyRows = tier.rows.map(r=>{
         const price = r[0]==='@';
         const label = price ? t.priceRowLbl : r[0];
-        const cells = r.slice(1).map(v=>`<td>${v}</td>`).join('');
+        const cells = r.slice(1).map((v,vi)=>`<td data-v="${tier.cols[vi][0]} ${tier.cols[vi][1]}">${v}</td>`).join('');
         return `<tr class="${price?'price-row':''}"><td class="rowlabel">${label}</td>${cells}</tr>`;
       }).join('');
       const pcCards = tier.pc.map((pc,ci)=>{
@@ -811,14 +831,21 @@ function unlock(){
     inp.select();
   }
 }
+function updNarrow(){
+  document.body.classList.toggle('narrow', mobileView || window.innerWidth <= 640);
+}
+window.addEventListener('resize', updNarrow);
+
 function toggleView(){
   mobileView = !mobileView;
   document.body.classList.toggle('force-mobile', mobileView);
   document.getElementById('viewToggle').classList.toggle('on', mobileView);
   document.getElementById('vtLabel').textContent = mobileView ? T[currentLang].vtDesk : T[currentLang].vtMob;
+  updNarrow();
 }
 
 render();
+updNarrow();
 </script>
 </body>
 </html>
