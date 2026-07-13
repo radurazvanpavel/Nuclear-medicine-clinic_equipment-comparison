@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medima — GE vs United Imaging</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&family=Red+Hat+Text:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#37008D; --secondary:#7D5DE7; --accent:#2AD1BC;
+  --ink:#1D1D29; --line:#E7E3EE; --bg:#FBFAFE; --card:#FFFFFF;
+  --neg:#C4452F; --pos:#0E8A73;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Red Hat Text',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+#app{max-width:1080px;margin:0 auto;padding:0 20px 80px;transition:max-width .35s ease}
+body.force-mobile #app{max-width:430px}
+h1,h2,h3{font-family:'Red Hat Display',sans-serif;color:var(--primary)}
+
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(251,250,254,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:10px 20px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.brand{font-family:'Red Hat Display';font-weight:900;color:var(--primary);font-size:18px;letter-spacing:.02em;display:flex;align-items:center;gap:8px}
+.brand img{height:26px;width:auto;display:block}
+.gate-card .brand{justify-content:center}
+.gate-card .brand img{height:40px}
+.brand span{color:var(--accent)}
+.controls{display:flex;gap:8px;align-items:center}
+.lang-switch{display:flex;border:1.5px solid var(--primary);border-radius:999px;overflow:hidden}
+.lang-switch button{border:none;background:transparent;color:var(--primary);font-family:'Red Hat Text';font-weight:700;font-size:12px;padding:6px 12px;cursor:pointer;transition:.2s}
+.lang-switch button.active{background:var(--primary);color:#fff}
+#viewToggle{border:1.5px solid var(--primary);background:transparent;color:var(--primary);border-radius:999px;padding:6px 12px;font-size:12px;font-weight:700;cursor:pointer;font-family:'Red Hat Text';display:none}
+#viewToggle.on{background:var(--accent);border-color:var(--accent);color:var(--ink)}
+@media(min-width:700px){#viewToggle{display:inline-block}}
+
+/* tabs */
+.tabbar{position:sticky;top:53px;z-index:40;display:flex;gap:6px;overflow-x:auto;padding:12px 0;background:var(--bg);border-bottom:1px solid var(--line);scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.tabbar::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;border:1.5px solid var(--line);background:var(--card);border-radius:999px;padding:8px 16px;font-family:'Red Hat Text';font-weight:700;font-size:13px;color:var(--ink);cursor:pointer;white-space:nowrap;transition:.2s}
+.tab:hover{border-color:var(--secondary)}
+.tab.active{background:var(--primary);border-color:var(--primary);color:#fff}
+.tab-panel{display:none}
+.tab-panel.active{display:block;animation:fadein .25s ease}
+@keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.tab-panel.active{animation:none}}
+
+/* hero */
+.hero{padding:36px 0 28px;border-bottom:3px solid var(--primary);position:relative}
+.hero .hero-logo{position:absolute;top:36px;right:0;height:52px;width:auto;opacity:.95}
+body.force-mobile .hero .hero-logo{height:38px}
+.eyebrow{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--secondary);border:1px solid var(--secondary);border-radius:999px;padding:4px 12px;margin-bottom:18px}
+.hero h1{font-size:clamp(26px,4.5vw,44px);font-weight:900;line-height:1.12;margin-bottom:14px}
+.hero p.sub{font-size:16px;color:#4a4560}
+.hero .meta{margin-top:20px;font-size:13px;color:#6c6784;display:flex;flex-wrap:wrap;gap:16px}
+.hero .meta b{color:var(--primary)}
+
+/* sections */
+section{padding:34px 0 8px}
+.sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(20px,3vw,28px);font-weight:900}
+.sec-tag{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.lead{color:#4a4560;margin-bottom:8px;font-size:15px}
+.price-note{font-size:12.5px;color:#8a86a0;margin-bottom:14px;font-style:italic}
+
+/* tier */
+.tier-head{display:flex;align-items:center;gap:12px;margin:30px 0 14px;flex-wrap:wrap}
+.tier-badge{font-family:'Red Hat Display';font-weight:900;font-size:14px;letter-spacing:.06em;text-transform:uppercase;background:var(--primary);color:#fff;border-radius:8px;padding:6px 14px}
+.tier-badge.solo{background:var(--secondary)}
+.tier-delta{font-size:13px;font-weight:700;padding:5px 12px;border-radius:999px}
+.tier-delta.pos{background:#E2F7F1;color:var(--pos)}
+.tier-delta.neg{background:#FBEAE6;color:var(--neg)}
+.tier-note{font-size:13px;color:#6c6784;margin:-6px 0 14px}
+
+/* context cards */
+.ctx-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-bottom:8px}
+.ctx-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.ctx-card .num{font-family:'Red Hat Display';font-weight:900;font-size:24px;color:var(--primary)}
+.ctx-card .lbl{font-size:13px;color:#6c6784;margin-top:4px}
+.note{background:#F1EDFB;border-left:4px solid var(--secondary);border-radius:0 10px 10px 0;padding:14px 16px;font-size:14px;margin-top:16px}
+
+/* package chart */
+.chart{margin-top:10px}
+.bar-row{display:grid;grid-template-columns:96px minmax(210px,360px) 1fr 108px 104px 92px;gap:14px;align-items:center;padding:10px 0;border-bottom:1px dashed var(--line);font-size:13.5px}
+.bar-tier{font-family:'Red Hat Display';font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;text-align:center;border-radius:8px;padding:5px 6px;background:#F1EDFB;color:var(--primary);white-space:nowrap}
+.bar-tier.hi{background:var(--primary);color:#fff}
+.bar-row:last-child{border-bottom:none}
+.bar-row.bar-head{border-bottom:2px solid var(--line);padding:6px 0;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#6c6784}
+.bar-models{display:block;line-height:1.35}
+body.force-mobile .bar-row{grid-template-columns:1fr;gap:3px}
+body.force-mobile .bar-head{display:none}
+.bar-name{font-weight:500}
+.bar-track{background:var(--line);border-radius:999px;height:16px;position:relative;overflow:hidden}
+.bar-fill{height:100%;border-radius:999px;background:var(--secondary)}
+.bar-fill.uih{background:var(--accent)}
+.bar-val{text-align:left;font-variant-numeric:tabular-nums;font-weight:500;white-space:nowrap}
+.bar-delta{text-align:left;font-variant-numeric:tabular-nums;white-space:nowrap}
+.bar-pct{text-align:left;font-variant-numeric:tabular-nums;font-weight:700;white-space:nowrap}
+body.force-mobile .bar-val{text-align:left}
+.delta-pos{color:var(--pos);font-weight:700}
+.delta-neg{color:var(--neg);font-weight:700}
+.budget-line{font-size:13px;margin:6px 0 16px;color:#6c6784}
+.budget-line b{color:var(--primary)}
+
+/* comparison tables */
+.table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--card);margin-bottom:18px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px}
+th,td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{font-family:'Red Hat Display';font-weight:700;color:#fff;background:var(--primary);font-size:13px}
+thead th.uih-col{background:var(--accent);color:var(--ink)}
+tbody tr:last-child td{border-bottom:none}
+td.rowlabel{font-weight:700;color:var(--primary);white-space:nowrap}
+tr.price-row td{background:#F6F3FC;font-weight:700}
+.vendor-model{display:block;font-weight:400;font-size:11.5px;opacity:.85}
+
+/* pros / cons */
+.pc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-bottom:12px}
+body.force-mobile .pc-grid{grid-template-columns:1fr}
+.pc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.pc-card.uih{border:1.5px solid var(--accent)}
+.pc-card h4{font-family:'Red Hat Display';font-size:15px;color:var(--primary);margin-bottom:10px}
+.pc-card h4 small{display:block;font-weight:500;color:#6c6784;font-size:12px}
+.pc-list{list-style:none;font-size:13px}
+.pc-list li{padding:4px 0 4px 22px;position:relative}
+.pc-list li.p::before{content:"+";position:absolute;left:0;top:3px;color:var(--pos);font-weight:900}
+.pc-list li.c::before{content:"–";position:absolute;left:0;top:3px;color:var(--neg);font-weight:900}
+
+/* risk */
+.risk-box{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--neg);border-radius:0 14px 14px 0;padding:20px 22px;margin-bottom:16px}
+.risk-box h3{font-size:16px;margin-bottom:8px;color:var(--neg)}
+.risk-box p{font-size:14px;color:#4a4560}
+.mit-wrap{border:2px solid var(--accent);border-radius:16px;padding:18px;background:#F2FBF9;margin-top:6px}
+.mit-wrap>h3{font-size:16px;color:var(--primary);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.mit-wrap>h3::before{content:"✓";flex:0 0 22px;height:22px;border-radius:50%;background:var(--accent);color:var(--ink);font-weight:900;display:flex;align-items:center;justify-content:center;font-size:13px}
+.mit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.mit-card{background:#fff;border:1.5px solid var(--accent);border-radius:12px;padding:14px 16px;font-size:13.5px}
+.mit-card b{display:block;color:var(--primary);margin-bottom:4px;font-family:'Red Hat Display'}
+
+/* recommendation */
+.reco{background:linear-gradient(135deg,var(--primary) 0%,#4b18ac 60%,#5a2bc0 100%);border-radius:20px;padding:34px 30px;color:#fff;margin-top:10px}
+.reco h2{color:#fff;font-size:clamp(20px,3vw,28px);margin-bottom:8px}
+.reco .tag{color:var(--accent);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.reco p{font-size:15px;opacity:.94;margin-top:10px}
+.reco-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:22px}
+.reco-item{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:14px 16px}
+.reco-item b{display:block;font-family:'Red Hat Display';font-size:15px;color:var(--accent)}
+.reco-item span{font-size:12.5px;opacity:.9}
+.reco .alt{margin-top:18px;font-size:13px;background:rgba(255,255,255,.08);border-radius:10px;padding:12px 14px}
+
+/* steps */
+.steps{counter-reset:st;margin-top:6px}
+.step{display:flex;gap:14px;padding:12px 0;border-bottom:1px dashed var(--line);font-size:14px;align-items:flex-start}
+.step::before{counter-increment:st;content:counter(st);flex:0 0 30px;height:30px;border-radius:50%;background:var(--accent);color:var(--ink);font-weight:900;font-family:'Red Hat Display';display:flex;align-items:center;justify-content:center;font-size:14px}
+footer{margin-top:50px;padding-top:18px;border-top:1px solid var(--line);font-size:12px;color:#8a86a0}
+
+/* password gate */
+#gate{position:fixed;inset:0;z-index:200;background:linear-gradient(135deg,#37008D 0%,#4b18ac 60%,#5a2bc0 100%);display:flex;align-items:center;justify-content:center;padding:20px}
+.gate-card{background:#fff;border-radius:20px;padding:38px 32px;max-width:380px;width:100%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.gate-card .brand{font-size:26px;margin-bottom:6px}
+.gate-card h2{font-size:18px;margin-bottom:4px}
+.gate-card p{font-size:13px;color:#6c6784;margin-bottom:20px}
+.gate-card input{width:100%;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;font-family:'Red Hat Text';font-size:15px;text-align:center;letter-spacing:.08em;outline:none;transition:.2s}
+.gate-card input:focus{border-color:var(--secondary)}
+.gate-card input.err{border-color:var(--neg);animation:shake .3s}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.gate-card button{margin-top:14px;width:100%;border:none;border-radius:12px;padding:12px;background:var(--primary);color:#fff;font-family:'Red Hat Display';font-weight:700;font-size:15px;cursor:pointer;transition:.2s}
+.gate-card button:hover{background:var(--secondary)}
+.gate-err{display:none;color:var(--neg);font-size:12.5px;margin-top:10px;font-weight:700}
+body.locked{overflow:hidden}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}#app{transition:none}}
+</style>
+</head>
+<body class="locked">
+<div id="gate">
+  <div class="gate-card">
+    <div class="brand"><img src="data:image/png;base64,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" alt="Medima">Medima</div>
+    <h2>Acces restricționat</h2>
+    <p>Document intern · Internal document · Document interne</p>
+    <input type="password" id="gatePass" placeholder="Parolă / Password" autocomplete="off" onkeydown="if(event.key==='Enter')unlock()">
+    <button onclick="unlock()">Deschide · Open · Ouvrir</button>
+    <div class="gate-err" id="gateErr">Parolă incorectă · Wrong password · Mot de passe incorrect</div>
+  </div>
+</div>
+<div class="topbar">
+  <div class="brand"><img src="data:image/png;base64,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" alt="Medima">Medima</div>
+  <div class="controls">
+    <button id="viewToggle" onclick="toggleView()">📱 <span id="vtLabel">Telefon</span></button>
+    <div class="lang-switch">
+      <button data-lang="ro" class="active" onclick="setLang('ro')">RO</button>
+      <button data-lang="en" onclick="setLang('en')">EN</button>
+      <button data-lang="fr" onclick="setLang('fr')">FR</button>
+    </div>
+  </div>
+</div>
+<div id="app"></div>
+
+<script>
+const BUDGET = 2554310;
+
+const PKG = [
+  {tier:'Mid-end', name:'GE Omni Legend + Revolution Altitude (CT 64 sl.)', models:'+ Signa Victor 1.5T + Pristina VIA 3D', total:2982650, uih:false},
+  {tier:'High-end', name:'GE Omni Legend + Revolution Altitude (CT 128 sl.)', models:'+ Signa Victor 1.5T + Pristina VIA 3D', total:3045570, uih:false},
+  {tier:'Mid-end', name:'United uMI 550 + uCT 550 (CT 80 sl.)', models:'+ uMR 670 Evolve + uMammo 870i', total:2559150, uih:true},
+  {tier:'High-end', name:'United uMI 550 + uCT 780 (CT 160 sl.)', models:'+ uMR 670 Evolve + uMammo 870i', total:2641430, uih:true}
+];
+
+const T = {
+/* ─────────────────────────── ROMANIAN ─────────────────────────── */
+ro: {
+  vtDesk:'Desktop', vtMob:'Telefon',
+  tabs:['Context','Pachete','PET-CT','CT','RM 1.5T','Mamograf','Riscuri','Concluzie'],
+  eyebrow:'Analiză comparativă echipamente',
+  title:'GE HealthCare vs. United Imaging',
+  sub:'Comparativ tehnic și financiar pe segmente de piață (mid / high-end) pentru echipamentele clinicii Medima Reșița, dezvoltată în parteneriat cu Oncohelp: PET-CT, CT, RM 1.5T și mamograf.',
+  meta1:'Analiză tehnică: A. Cîță · D. Moșneagu', meta2:'Iulie 2026', meta3:'Valori cu TVA inclus, EUR',
+  ctxTag:'Context', ctxTitle:'Cadrul deciziei',
+  ctxLead:'Pentru clinica Medima de la Reșița, dezvoltată în parteneriat cu Oncohelp, decizia de Board privind echipamentele trebuie reluată cât mai rapid: sistemul PET-CT GE aprobat (Discovery IQ 3R) a ieșit din producție. Ofertele complete primite de la GE HealthCare și United Imaging (UIH) sunt comparate mai jos, pe același segment de piață: mid cu mid, high cu high.',
+  ctxCards:[
+    ['Reșița','Clinică Medima în parteneriat cu Oncohelp'],
+    ['2.554.310 EUR','Buget CAPEX aprobat în Board (TVA inclus)'],
+    ['4','Echipamente: PET-CT · CT · RM 1.5T · Mamograf'],
+    ['Ieșit din producție','PET-CT-ul GE aprobat (Discovery IQ 3R) — decizia se reia']
+  ],
+  ctxNote:'<b>Siemens</b> nu a transmis încă o ofertă, în ciuda discuțiilor repetate. O decizie privind United Imaging nu exclude negocierea ulterioară cu Siemens — ofertele pot fi comparate la momentul primirii.',
+  pkgTag:'Pachete', pkgTitle:'Comparația financiară a pachetelor',
+  pkgLead:'Valoarea totală a fiecărei configurații complete (PET-CT + CT + RM + mamograf), raportată la bugetul CAPEX. Calculele exclud HotLab-ul (205.700 EUR, dedus din oferte).',
+  budgetLbl:'Buget CAPEX de referință:',
+  deltaLbl:'Diferență',
+  pkgColCfg:'Configurație CT', pkgColName:'Pachet', pkgColVal:'Valoare', pkgColDelta:'Diferență', pkgColPct:'% vs CAPEX',
+  pkgNote:'Configurațiile bazate pe GE Discovery IQ au fost eliminate — sistemul a ieșit din producție. Fiecare pachet include RM 1.5T și mamograful furnizorului respectiv.',
+  petTag:'1 · PET-CT', ctTag:'2 · CT', mrTag:'3 · RM 1.5T', mgTag:'4 · Mamograf',
+  proLbl:'Puncte forte', conLbl:'Puncte slabe',
+  specLbl:'Specificație',
+  priceRowLbl:'Preț echipament (TVA inclus)',
+  priceNote:'Prețuri de echipament cu TVA inclus, fără costuri adiționale (amenajări, ecranare, HotLab).',
+  soloNote:'United Imaging nu a ofertat un sistem în acest segment.',
+  modalities:[
+  { title:'PET-CT', lead:'Sistemul aprobat inițial în Board, GE Discovery IQ 3R (low-end, analogic), a ieșit din producție și a fost exclus din comparație. Decizia se ia între cele două platforme digitale high-end ofertate.',
+    tiers:[
+      { tier:'High-end', delta:-336380,
+        cols:[['GE','Omni Legend'],['UIH','uMI 550']],
+        rows:[
+          ['Tehnologie PET','Digital SiPM','Digital SiPM (ILG)'],
+          ['Acoperire axială (AFOV)','16 cm','24 cm'],
+          ['CT integrat','64 slice (opț. 128)','80 slice'],
+          ['Reconstrucție / AI','Precision DL, Q.Clear, Q.AC, AI Auto Positioning','TOF 375 ps, HYPER DPR, Deep Recon, KARL 3D'],
+          ['@','1.631.080 EUR','1.294.700 EUR']
+        ],
+        pc:[
+          {pros:['PET digital SiPM, platformă GE modernă','Ecosistem software și operațional foarte dezvoltat','Cel mai redus risc perceput de service'],
+           cons:['AFOV 16 cm, sub cei 24 cm United','CT 64 slice, sub cel United de 80 slice','Preț de echipament cu ~336.000 EUR peste uMI 550','Prima de preț justificată de ecosistem, nu de performanță']},
+          {pros:['PET digital SiPM cu AFOV de 24 cm — cel mai mare din comparație','CT integrat de 80 slice','Pachet AI complet: TOF 375 ps, HYPER, Deep Recon','Performanță superioară la un preț semnificativ mai mic decât Omni Legend'],
+           cons:['Rețea locală de service mai puțin matură','AI Auto Positioning neinclus — de negociat']}
+        ]}
+    ]},
+  { title:'CT', lead:'Ambii furnizori au ofertat în segmentele mid și high-end. GE acoperă ambele segmente cu Revolution Altitude, în configurații diferite; United cu două modele distincte.',
+    tiers:[
+      { tier:'Mid-end', delta:-70180,
+        cols:[['GE','Revolution Altitude'],['UIH','uCT 550']],
+        rows:[
+          ['Slice-uri','64 slice (detector 20 mm în config. ofertată)','80 slice, grosime minimă 0,55 mm'],
+          ['Rotație','0,4 s','0,5 s'],
+          ['Generator / tub','55 kW / 5,5 MHU','50 kW / 5,3 MHU'],
+          ['Reconstrucție / AI','TrueFidelity DL, AW Server','DELTA DL, KARL 3D, matrice 1024, uOmnispace'],
+          ['@','396.880 EUR','326.700 EUR']
+        ],
+        pc:[
+          {pros:['Platformă GE consacrată, service matur','TrueFidelity + ecosistem AW Server','Rotație 0,4 s, adecvată pentru CT de rutină','Pachet complet de instalare — risc de execuție redus'],
+           cons:['64 slice și detector de 20 mm în configurația ofertată','Unele aplicații avansate depind de pachete software opționale']},
+          {pros:['Cel mai bun raport preț/performanță pentru oncologie','80 slice, peste configurația GE ofertată','Opțiuni cardiace de bază incluse — potențial de decontare CNAS suplimentară','Stație de lucru, injector, instalare, comisionare și instruire incluse'],
+           cons:['Generator 50 kW și rotație 0,5 s — sub nivel high-end','Mai puțin potrivit pentru protocoale cardiace exigente','Baza instalată europeană mai mică — de confirmat contractual']}
+        ]},
+      { tier:'High-end', delta:-50820,
+        cols:[['GE','Revolution Altitude (config. superioară)'],['UIH','uCT 780']],
+        rows:[
+          ['Slice-uri','128 sl/rot (config. ofertată limitată 32/64, detector 20 mm)','160 slice, matrice 1024×1024'],
+          ['Rotație','0,4 s','0,35 s'],
+          ['Generator / tub','55 kW / 5,5 MHU','80 kW / 7,5 MHU'],
+          ['Reconstrucție / AI','TrueFidelity DL, AW Server','DELTA DL, stație uOmnispace'],
+          ['@','459.800 EUR','408.980 EUR']
+        ],
+        pc:[
+          {pros:['Platformă GE consacrată, service matur','TrueFidelity + ecosistem AW Server','Pachet complet de instalare'],
+           cons:['Plafon tehnic sub uCT 780: generator, tub, rotație și slice-uri inferioare','Aceeași platformă ca în segmentul mid, la preț mai mare','Mai scump decât uCT 780 cu ~50.800 EUR']},
+          {pros:['Cea mai performantă configurație CT din comparație','160 slice · 0,35 s · 80 kW · 7,5 MHU','Rezervă tehnologică pentru CTA, vascular, cardiologie','Mai ieftin decât configurația GE echivalentă'],
+           cons:['Unele aplicații cardiace avansate / dual-energy neincluse','Service și piese de garantat contractual','Necesită volum clinic pentru valorificarea completă']}
+        ]}
+    ]},
+  { title:'RM 1.5T', lead:'Ambele sisteme ofertate se situează în segmentul mid-end 1.5T — comparație directă pe același nivel.',
+    tiers:[
+      { tier:'Mid-end', delta:27830,
+        cols:[['GE','Signa Victor 1.5T 64ch'],['UIH','uMR 670 Evolve']],
+        rows:[
+          ['Bore','60 cm','70 cm'],
+          ['Canale / bobine','64 canale, dar puține canale active per bobină (7 bobine)','48 canale, 13 bobine incluse'],
+          ['Gradienți','35 mT/m · 140 T/m/s','33 mT/m · 130 T/m/s'],
+          ['Confort / aplicații','Sistem audio de relaxare','DeepRecon AI, senzor respirator integrat, audio-video „starry sky"'],
+          ['@','909.920 EUR','937.750 EUR']
+        ],
+        pc:[
+          {pros:['Cu ~28.000 EUR mai ieftin decât United','Infrastructură GE matură de service și training','Gradienți ușor mai puternici','Risc operațional mai redus (bază instalată)'],
+           cons:['Bore de 60 cm vs. 70 cm','Mai puține bobine incluse','Configurație prezentată mai puțin transparent','Confort redus pentru pacienți claustrofobi / supraponderali']},
+          {pros:['Bore de 70 cm — confort și accesibilitate','48 canale, 13 bobine — acoperă whole-body (cerință Medima)','DeepRecon AI + pachet clinic extins','Cușcă Faraday, chiller, injector, instalare, instruire incluse'],
+           cons:['~28.000 EUR peste GE','Gradienți ușor sub GE','Capacitatea locală de service — de susținut prin SLA']}
+        ]}
+    ]},
+  { title:'Mamograf', lead:'GE a ofertat Pristina VIA 3D în segmentul mid-end premium; United a ofertat uMammo 870i, poziționat ca DBT avansat — comparație directă între cele două oferte.',
+    tiers:[
+      { tier:'Mid / high-end DBT', delta:-44770,
+        cols:[['GE','Pristina VIA 3D'],['UIH','uMammo 870i']],
+        rows:[
+          ['Tomosinteză','3D standard','2D + 3D dual-angle'],
+          ['Pixel detector','100 μm','76 μm — rezoluție teoretică superioară'],
+          ['Stație de lucru','Stație de achiziție reglabilă','uWS-DBT GRACE + 2 monitoare Barco'],
+          ['@','250.470 EUR','205.700 EUR']
+        ],
+        pc:[
+          {pros:['Platformă consacrată, cunoscută de radiologi','Tomosinteză 3D + Recon DL incluse','Ecosistem matur de service și instruire'],
+           cons:['Cu ~44.800 EUR mai scump decât United','Detalii limitate despre detector în ofertă','Prima de preț justificată în principal de brand']},
+          {pros:['Cel mai clar avantaj financiar din pachet: −44.800 EUR','Tomosinteză dual-angle + stație GRACE + 2 monitoare Barco','Pixel 76 μm — vizualizare superioară a microcalcificărilor','Instalare, instruire, garanție 24 luni incluse'],
+           cons:['Bază instalată europeană mai redusă','Parametrii detectorului — de confirmat în anexa tehnică','Timp de intervenție și piese — de garantat contractual']}
+        ]}
+    ]}
+  ],
+  riskTag:'Riscuri', riskTitle:'Riscul principal și mitigarea lui',
+  riskHead:'Organizația locală de service United Imaging este imatură',
+  riskBody:'Organizația locală de service UIH este în construcție: inginerii de teren sunt angajați prin distribuitori locali, iar suportul tehnic este asigurat din Polonia și din hub-ul european de la Rotterdam. O organizație directă locală este planificată pentru H2 2027. Acesta este contra-argumentul central față de pachetul United — însă există soluții clare de mitigare, care se tratează contractual.',
+  mitTitle:'Soluții clare de mitigare — de inclus în contract',
+  mits:[
+    ['SLA contractual','Uptime garantat, timpi de răspuns și penalități pentru fiecare echipament.'],
+    ['Piese și escaladare','Stoc local de piese critice și traseu de escaladare definit în contract.'],
+    ['Garanție 24 luni','Inclusă în oferte; de corelat cu contract de mentenanță post-garanție.'],
+    ['Negociere pachet','Includerea AI Auto Positioning (PET-CT) în preț.']
+  ],
+  recoTag:'Concluzie', recoTitle:'Recomandarea echipei tehnice',
+  recoBody:'Pe baza analizei tehnice și financiare, echipa tehnică recomandă pachetul integral United Imaging: uMI 550 · uCT 780 · uMR 670 Evolve · uMammo 870i — 2.641.430 EUR ca pachet complet, o depășire de doar ~3,4% față de bugetul CAPEX, pentru un salt tehnologic semnificativ pe fiecare modalitate. La nivel de segment, United câștigă comparația directă la PET-CT high-end, CT mid și high-end și mamograf, iar la RM diferența de preț este marginală față de avantajele de configurație.',
+  recoItems:[
+    ['PET digital 24 cm','−336.380 EUR față de GE Omni Legend, la AFOV și CT superioare'],
+    ['CT 160 slice','−50.820 EUR față de configurația GE high-end, la performanțe net superioare'],
+    ['RM bore 70 cm','+27.830 EUR față de GE, pentru 13 bobine, whole-body și DeepRecon'],
+    ['Mamograf −44.770 EUR','dual-angle DBT, GRACE, 2 monitoare Barco']
+  ],
+  recoAlt:'<b>Cele două opțiuni de pachet United:</b><br>① Varianta recomandată, cu uCT 780 (CT 160 slice): <b>2.641.430 EUR</b> — cu 87.120 EUR (~3,4%) peste buget.<br>② Varianta încadrată în buget, cu uCT 550 (CT 80 slice): <b>2.559.150 EUR</b> — cu doar 4.840 EUR peste buget.<br>Pentru comparație: cel mai ieftin pachet GE rămas în analiză (Omni Legend + Revolution Altitude) costă <b>2.982.650 EUR</b>, adică cu peste 341.000 EUR mai mult decât chiar varianta United recomandată.',
+  stepsTag:'Pași următori', stepsTitle:'Ce urmează',
+  steps:[
+    'Validarea direcției: acord de principiu asupra furnizorului United Imaging.',
+    'Negocierea contractuală: SLA de service (uptime, penalități, piese, escaladare), includerea AI Auto Positioning.',
+    'Menținerea în paralel a discuției cu Siemens — oferta poate fi comparată la primire, fără a bloca decizia.',
+    'Contractare și planificarea instalării.'
+  ],
+  footer:'Document intern Medima Health S.A. · Sursă: comparativ echipamente și analiză pro/contra — A. Cîță, D. Moșneagu · Prețuri de echipament cu TVA inclus, fără costuri adiționale; totalurile de pachet includ costurile adiționale conform analizei CAPEX.'
+},
+/* ─────────────────────────── ENGLISH ─────────────────────────── */
+en: {
+  vtDesk:'Desktop', vtMob:'Phone',
+  tabs:['Context','Packages','PET-CT','CT','1.5T MRI','Mammography','Risks','Conclusion'],
+  eyebrow:'Comparative equipment analysis',
+  title:'GE HealthCare vs. United Imaging',
+  sub:'Technical and financial comparison by market segment (mid / high-end) for the equipment of the Medima Reșița clinic, developed in partnership with Oncohelp: PET-CT, CT, 1.5T MRI and mammography.',
+  meta1:'Technical analysis: A. Cîță · D. Moșneagu', meta2:'July 2026', meta3:'Values incl. VAT, EUR',
+  ctxTag:'Context', ctxTitle:'Decision framework',
+  ctxLead:'For the Medima clinic in Reșița, developed in partnership with Oncohelp, the Board decision on equipment must be revisited as quickly as possible: the approved GE PET-CT system (Discovery IQ 3R) has been discontinued. The complete offers received from GE HealthCare and United Imaging (UIH) are compared below, within the same market segment: mid vs mid, high vs high.',
+  ctxCards:[
+    ['Reșița','Medima clinic in partnership with Oncohelp'],
+    ['€2,554,310','CAPEX budget approved by the Board (VAT incl.)'],
+    ['4','Systems: PET-CT · CT · 1.5T MRI · Mammography'],
+    ['Discontinued','Approved GE PET-CT (Discovery IQ 3R) — decision to be retaken']
+  ],
+  ctxNote:'<b>Siemens</b> has not yet submitted an offer despite repeated discussions. A decision on United Imaging does not preclude subsequent negotiation with Siemens — their offer can be benchmarked upon receipt.',
+  pkgTag:'Packages', pkgTitle:'Financial comparison of packages',
+  pkgLead:'Total value of each complete configuration (PET-CT + CT + MRI + mammography) against the CAPEX budget. Figures exclude the HotLab (€205,700, already deducted from the offers).',
+  budgetLbl:'Reference CAPEX budget:',
+  deltaLbl:'Difference',
+  pkgColCfg:'CT configuration', pkgColName:'Package', pkgColVal:'Value', pkgColDelta:'Difference', pkgColPct:'% vs CAPEX',
+  pkgNote:'Configurations based on the GE Discovery IQ have been removed — the system has been discontinued. Each package includes the respective vendor\u2019s 1.5T MRI and mammography system.',
+  petTag:'1 · PET-CT', ctTag:'2 · CT', mrTag:'3 · 1.5T MRI', mgTag:'4 · Mammography',
+  proLbl:'Strengths', conLbl:'Weaknesses',
+  specLbl:'Specification',
+  priceRowLbl:'Equipment price (VAT incl.)',
+  priceNote:'Equipment prices incl. VAT, excluding additional costs (site works, shielding, HotLab).',
+  soloNote:'United Imaging did not quote a system in this segment.',
+  modalities:[
+  { title:'PET-CT', lead:'The system originally approved by the Board, the GE Discovery IQ 3R (low-end, analog), has been discontinued and was excluded from the comparison. The decision is between the two quoted high-end digital platforms.',
+    tiers:[
+      { tier:'High-end', delta:-336380,
+        cols:[['GE','Omni Legend'],['UIH','uMI 550']],
+        rows:[
+          ['PET technology','Digital SiPM','Digital SiPM (ILG)'],
+          ['Axial coverage (AFOV)','16 cm','24 cm'],
+          ['Integrated CT','64-slice (opt. 128)','80-slice'],
+          ['Reconstruction / AI','Precision DL, Q.Clear, Q.AC, AI Auto Positioning','TOF 375 ps, HYPER DPR, Deep Recon, KARL 3D'],
+          ['@','€1,631,080','€1,294,700']
+        ],
+        pc:[
+          {pros:['Digital SiPM PET, modern GE platform','Highly developed software and operational ecosystem','Lowest perceived service risk'],
+           cons:['16 cm AFOV, below United\u2019s 24 cm','64-slice CT vs United\u2019s 80-slice','Equipment price ~€336,000 above the uMI 550','Price premium justified by ecosystem, not performance']},
+          {pros:['Digital SiPM PET with 24 cm AFOV — the largest in the comparison','Integrated 80-slice CT','Full AI suite: TOF 375 ps, HYPER, Deep Recon','Superior performance at a significantly lower price than the Omni Legend'],
+           cons:['Less mature local service network','AI Auto Positioning not included — to be negotiated']}
+        ]}
+    ]},
+  { title:'CT', lead:'Both vendors quoted in the mid and high-end segments. GE covers both with the Revolution Altitude in different configurations; United with two distinct models.',
+    tiers:[
+      { tier:'Mid-end', delta:-70180,
+        cols:[['GE','Revolution Altitude'],['UIH','uCT 550']],
+        rows:[
+          ['Slices','64-slice (20 mm detector in the offered config)','80-slice, 0.55 mm minimum slice thickness'],
+          ['Rotation','0.4 s','0.5 s'],
+          ['Generator / tube','55 kW / 5.5 MHU','50 kW / 5.3 MHU'],
+          ['Reconstruction / AI','TrueFidelity DL, AW Server','DELTA DL, KARL 3D, 1024 matrix, uOmnispace'],
+          ['@','€396,880','€326,700']
+        ],
+        pc:[
+          {pros:['Established GE platform, mature service','TrueFidelity + AW Server ecosystem','0.4 s rotation, adequate for routine CT','Comprehensive installation package — low execution risk'],
+           cons:['64 slices and 20 mm detector in the offered configuration','Some advanced applications depend on optional software packages']},
+          {pros:['Best price/performance for oncology','80 slices, above the quoted GE configuration','Basic cardiac options included — potential extra NHIF reimbursement','Workstation, injector, installation, commissioning and training included'],
+           cons:['50 kW generator and 0.5 s rotation — below high-end level','Less suited to demanding cardiac protocols','Smaller European installed base — to be confirmed contractually']}
+        ]},
+      { tier:'High-end', delta:-50820,
+        cols:[['GE','Revolution Altitude (higher config)'],['UIH','uCT 780']],
+        rows:[
+          ['Slices','128 sl/rot (offered config limited 32/64, 20 mm detector)','160-slice, 1024×1024 matrix'],
+          ['Rotation','0.4 s','0.35 s'],
+          ['Generator / tube','55 kW / 5.5 MHU','80 kW / 7.5 MHU'],
+          ['Reconstruction / AI','TrueFidelity DL, AW Server','DELTA DL, uOmnispace workstation'],
+          ['@','€459,800','€408,980']
+        ],
+        pc:[
+          {pros:['Established GE platform, mature service','TrueFidelity + AW Server ecosystem','Comprehensive installation package'],
+           cons:['Technical ceiling below the uCT 780: generator, tube, rotation and slices all inferior','Same platform as the mid segment, at a higher price','~€50,800 more expensive than the uCT 780']},
+          {pros:['Strongest CT configuration in the comparison','160-slice · 0.35 s · 80 kW · 7.5 MHU','Technology headroom for CTA, vascular, cardiology','Cheaper than the equivalent GE configuration'],
+           cons:['Some advanced cardiac / dual-energy applications not included','Service and parts to be guaranteed contractually','Requires clinical volume to exploit fully']}
+        ]}
+    ]},
+  { title:'1.5T MRI', lead:'Both quoted systems sit in the mid-end 1.5T segment — a direct like-for-like comparison.',
+    tiers:[
+      { tier:'Mid-end', delta:27830,
+        cols:[['GE','Signa Victor 1.5T 64ch'],['UIH','uMR 670 Evolve']],
+        rows:[
+          ['Bore','60 cm','70 cm'],
+          ['Channels / coils','64 channels, but few active channels per coil (7 coils)','48 channels, 13 coils included'],
+          ['Gradients','35 mT/m · 140 T/m/s','33 mT/m · 130 T/m/s'],
+          ['Comfort / applications','Relaxation audio system','DeepRecon AI, integrated respiratory sensor, "starry sky" audio-video'],
+          ['@','€909,920','€937,750']
+        ],
+        pc:[
+          {pros:['~€28,000 cheaper than United','Mature GE service and training infrastructure','Slightly stronger gradients','Lower operational risk (installed base)'],
+           cons:['60 cm bore vs 70 cm','Fewer coils included','Configuration less transparently presented','Reduced comfort for claustrophobic / larger patients']},
+          {pros:['70 cm bore — comfort and accessibility','48 channels, 13 coils — covers whole-body (Medima requirement)','DeepRecon AI + extensive clinical package','Faraday cage, chiller, injector, installation, training included'],
+           cons:['~€28,000 above GE','Gradients slightly below GE','Local service capacity — to be secured via SLA']}
+        ]}
+    ]},
+  { title:'Mammography', lead:'GE quoted the Pristina VIA 3D in the premium mid-end segment; United quoted the uMammo 870i, positioned as advanced DBT — a direct comparison of the two offers.',
+    tiers:[
+      { tier:'Mid / high-end DBT', delta:-44770,
+        cols:[['GE','Pristina VIA 3D'],['UIH','uMammo 870i']],
+        rows:[
+          ['Tomosynthesis','Standard 3D','2D + dual-angle 3D'],
+          ['Detector pixel','100 μm','76 μm — higher theoretical resolution'],
+          ['Workstation','Height-adjustable acquisition station','uWS-DBT GRACE + 2 Barco monitors'],
+          ['@','€250,470','€205,700']
+        ],
+        pc:[
+          {pros:['Established platform, well known to radiologists','3D tomosynthesis + Recon DL included','Mature service and training ecosystem'],
+           cons:['~€44,800 more expensive than United','Limited detector detail in the offer','Price premium mainly justified by brand']},
+          {pros:['Clearest financial advantage in the package: −€44,800','Dual-angle tomosynthesis + GRACE workstation + 2 Barco monitors','76 μm pixel — better visualisation of microcalcifications','Installation, training, 24-month warranty included'],
+           cons:['Smaller European installed base','Detector parameters — to be confirmed in the technical annex','Response times and parts — to be guaranteed contractually']}
+        ]}
+    ]}
+  ],
+  riskTag:'Risks', riskTitle:'The key risk and its mitigation',
+  riskHead:'United Imaging\u2019s local service organisation is immature',
+  riskBody:'UIH\u2019s local service organisation is still being built: field engineers are employed through local distributors, and technical support is provided from Poland and the European hub in Rotterdam. A fully direct local organisation is planned for H2 2027. This is the central counter-argument to the United package — but there are clear mitigation solutions, to be addressed contractually.',
+  mitTitle:'Clear mitigation solutions — to be included in the contract',
+  mits:[
+    ['Contractual SLA','Guaranteed uptime, response times and penalties for each system.'],
+    ['Parts & escalation','Local stock of critical parts and a defined escalation path in the contract.'],
+    ['24-month warranty','Included in the offers; to be aligned with a post-warranty maintenance contract.'],
+    ['Package negotiation','Inclusion of AI Auto Positioning (PET-CT) in the price.']
+  ],
+  recoTag:'Conclusion', recoTitle:'Technical team recommendation',
+  recoBody:'Based on the technical and financial analysis, the technical team recommends the full United Imaging package: uMI 550 · uCT 780 · uMR 670 Evolve · uMammo 870i — €2,641,430 as a complete package, only ~3.4% above the CAPEX budget, for a significant technology step-up in every modality. Segment by segment, United wins the direct comparison at high-end PET-CT, mid and high-end CT and mammography, while on MRI the price gap is marginal against the configuration advantages.',
+  recoItems:[
+    ['24 cm digital PET','−€336,380 vs GE Omni Legend, with superior AFOV and CT'],
+    ['160-slice CT','−€50,820 vs the GE high-end configuration, with clearly superior performance'],
+    ['70 cm bore MRI','+€27,830 vs GE, for 13 coils, whole-body and DeepRecon'],
+    ['Mammography −€44,770','dual-angle DBT, GRACE, 2 Barco monitors']
+  ],
+  recoAlt:'<b>The two United package options:</b><br>① The recommended one, with the uCT 780 (160-slice CT): <b>€2,641,430</b> — €87,120 (~3.4%) above budget.<br>② The on-budget one, with the uCT 550 (80-slice CT): <b>€2,559,150</b> — just €4,840 above budget.<br>For comparison: the cheapest GE package still in scope (Omni Legend + Revolution Altitude) costs <b>€2,982,650</b>, i.e. over €341,000 more than even the recommended United option.',
+  stepsTag:'Next steps', stepsTitle:'What happens next',
+  steps:[
+    'Validate the direction: agreement in principle on United Imaging as supplier.',
+    'Contract negotiation: service SLA (uptime, penalties, parts, escalation), inclusion of AI Auto Positioning.',
+    'Keep the Siemens discussion open in parallel — their offer can be benchmarked upon receipt without blocking the decision.',
+    'Contracting and installation planning.'
+  ],
+  footer:'Medima Health S.A. internal document · Source: equipment comparison and pros/cons analysis — A. Cîță, D. Moșneagu · Equipment prices incl. VAT, excluding additional costs; package totals include additional costs per the CAPEX analysis.'
+},
+/* ─────────────────────────── FRENCH ─────────────────────────── */
+fr: {
+  vtDesk:'Bureau', vtMob:'Téléphone',
+  tabs:['Contexte','Packages','TEP-TDM','Scanner','IRM 1,5 T','Mammographe','Risques','Conclusion'],
+  eyebrow:'Analyse comparative des équipements',
+  title:'GE HealthCare vs. United Imaging',
+  sub:'Comparaison technique et financière par segment de marché (mid / high-end) pour les équipements de la clinique Medima de Reșița, développée en partenariat avec Oncohelp : TEP-TDM, scanner, IRM 1,5 T et mammographe.',
+  meta1:'Analyse technique : A. Cîță · D. Moșneagu', meta2:'Juillet 2026', meta3:'Valeurs TVA incluse, EUR',
+  ctxTag:'Contexte', ctxTitle:'Cadre de la décision',
+  ctxLead:'Pour la clinique Medima de Reșița, développée en partenariat avec Oncohelp, la décision du Board concernant les équipements doit être reprise au plus vite : le système TEP-TDM GE approuvé (Discovery IQ 3R) est sorti de production. Les offres complètes reçues de GE HealthCare et de United Imaging (UIH) sont comparées ci-dessous, au sein du même segment de marché : mid avec mid, high avec high.',
+  ctxCards:[
+    ['Reșița','Clinique Medima en partenariat avec Oncohelp'],
+    ['2 554 310 €','Budget CAPEX approuvé par le Board (TVA incluse)'],
+    ['4','Équipements : TEP-TDM · Scanner · IRM 1,5 T · Mammographe'],
+    ['Sorti de production','TEP-TDM GE approuvé (Discovery IQ 3R) — décision à reprendre']
+  ],
+  ctxNote:'<b>Siemens</b> n\u2019a pas encore transmis d\u2019offre malgré des discussions répétées. Une décision sur United Imaging n\u2019exclut pas une négociation ultérieure avec Siemens — leur offre pourra être comparée à réception.',
+  pkgTag:'Packages', pkgTitle:'Comparaison financière des packages',
+  pkgLead:'Valeur totale de chaque configuration complète (TEP-TDM + scanner + IRM + mammographe) par rapport au budget CAPEX. Les calculs excluent le HotLab (205 700 €, déjà déduit des offres).',
+  budgetLbl:'Budget CAPEX de référence :',
+  deltaLbl:'Écart',
+  pkgColCfg:'Configuration CT', pkgColName:'Package', pkgColVal:'Valeur', pkgColDelta:'Écart', pkgColPct:'% vs CAPEX',
+  pkgNote:'Les configurations basées sur le GE Discovery IQ ont été retirées — le système est sorti de production. Chaque package inclut l\u2019IRM 1,5 T et le mammographe du fournisseur respectif.',
+  petTag:'1 · TEP-TDM', ctTag:'2 · Scanner', mrTag:'3 · IRM 1,5 T', mgTag:'4 · Mammographe',
+  proLbl:'Points forts', conLbl:'Points faibles',
+  specLbl:'Spécification',
+  priceRowLbl:'Prix équipement (TVA incluse)',
+  priceNote:'Prix des équipements TVA incluse, hors coûts additionnels (aménagements, blindage, HotLab).',
+  soloNote:'United Imaging n\u2019a pas proposé de système dans ce segment.',
+  modalities:[
+  { title:'TEP-TDM', lead:'Le système initialement approuvé par le Board, le GE Discovery IQ 3R (low-end, analogique), est sorti de production et a été exclu de la comparaison. La décision se joue entre les deux plateformes numériques high-end proposées.',
+    tiers:[
+      { tier:'High-end', delta:-336380,
+        cols:[['GE','Omni Legend'],['UIH','uMI 550']],
+        rows:[
+          ['Technologie TEP','Numérique SiPM','Numérique SiPM (ILG)'],
+          ['Couverture axiale (AFOV)','16 cm','24 cm'],
+          ['Scanner intégré','64 coupes (opt. 128)','80 coupes'],
+          ['Reconstruction / IA','Precision DL, Q.Clear, Q.AC, AI Auto Positioning','TOF 375 ps, HYPER DPR, Deep Recon, KARL 3D'],
+          ['@','1 631 080 €','1 294 700 €']
+        ],
+        pc:[
+          {pros:['TEP numérique SiPM, plateforme GE moderne','Écosystème logiciel et opérationnel très développé','Risque de service perçu le plus faible'],
+           cons:['AFOV 16 cm, sous les 24 cm de United','Scanner 64 coupes vs 80 coupes United','Prix équipement supérieur d\u2019environ 336 000 € au uMI 550','Prime de prix justifiée par l\u2019écosystème, non par la performance']},
+          {pros:['TEP numérique SiPM avec AFOV de 24 cm — le plus grand de la comparaison','Scanner intégré de 80 coupes','Suite IA complète : TOF 375 ps, HYPER, Deep Recon','Performance supérieure à un prix nettement inférieur à l\u2019Omni Legend'],
+           cons:['Réseau de service local moins mature','AI Auto Positioning non inclus — à négocier']}
+        ]}
+    ]},
+  { title:'Scanner (CT)', lead:'Les deux fournisseurs ont proposé des systèmes dans les segments mid et high-end. GE couvre les deux avec le Revolution Altitude en configurations différentes ; United avec deux modèles distincts.',
+    tiers:[
+      { tier:'Mid-end', delta:-70180,
+        cols:[['GE','Revolution Altitude'],['UIH','uCT 550']],
+        rows:[
+          ['Coupes','64 coupes (détecteur 20 mm dans la config. offerte)','80 coupes, épaisseur minimale 0,55 mm'],
+          ['Rotation','0,4 s','0,5 s'],
+          ['Générateur / tube','55 kW / 5,5 MHU','50 kW / 5,3 MHU'],
+          ['Reconstruction / IA','TrueFidelity DL, AW Server','DELTA DL, KARL 3D, matrice 1024, uOmnispace'],
+          ['@','396 880 €','326 700 €']
+        ],
+        pc:[
+          {pros:['Plateforme GE éprouvée, service mature','TrueFidelity + écosystème AW Server','Rotation 0,4 s, adaptée au scanner de routine','Package d\u2019installation complet — faible risque d\u2019exécution'],
+           cons:['64 coupes et détecteur de 20 mm dans la configuration offerte','Certaines applications avancées dépendent de logiciels optionnels']},
+          {pros:['Meilleur rapport prix/performance pour l\u2019oncologie','80 coupes, au-dessus de la configuration GE proposée','Options cardiaques de base incluses — remboursement CNAS potentiel supplémentaire','Station de travail, injecteur, installation, mise en service et formation incluses'],
+           cons:['Générateur 50 kW et rotation 0,5 s — sous le niveau high-end','Moins adapté aux protocoles cardiaques exigeants','Base installée européenne plus réduite — à confirmer contractuellement']}
+        ]},
+      { tier:'High-end', delta:-50820,
+        cols:[['GE','Revolution Altitude (config. supérieure)'],['UIH','uCT 780']],
+        rows:[
+          ['Coupes','128 c/rot (config. offerte limitée 32/64, détecteur 20 mm)','160 coupes, matrice 1024×1024'],
+          ['Rotation','0,4 s','0,35 s'],
+          ['Générateur / tube','55 kW / 5,5 MHU','80 kW / 7,5 MHU'],
+          ['Reconstruction / IA','TrueFidelity DL, AW Server','DELTA DL, station uOmnispace'],
+          ['@','459 800 €','408 980 €']
+        ],
+        pc:[
+          {pros:['Plateforme GE éprouvée, service mature','TrueFidelity + écosystème AW Server','Package d\u2019installation complet'],
+           cons:['Plafond technique sous le uCT 780 : générateur, tube, rotation et coupes inférieurs','Même plateforme que le segment mid, à un prix supérieur','~50 800 € plus cher que le uCT 780']},
+          {pros:['Configuration scanner la plus performante de la comparaison','160 coupes · 0,35 s · 80 kW · 7,5 MHU','Réserve technologique pour angio-CT, vasculaire, cardiologie','Moins cher que la configuration GE équivalente'],
+           cons:['Certaines applications cardiaques avancées / dual-energy non incluses','Service et pièces à garantir contractuellement','Nécessite un volume clinique suffisant pour être pleinement exploité']}
+        ]}
+    ]},
+  { title:'IRM 1,5 T', lead:'Les deux systèmes proposés se situent dans le segment mid-end 1,5 T — comparaison directe au même niveau.',
+    tiers:[
+      { tier:'Mid-end', delta:27830,
+        cols:[['GE','Signa Victor 1.5T 64ch'],['UIH','uMR 670 Evolve']],
+        rows:[
+          ['Tunnel (bore)','60 cm','70 cm'],
+          ['Canaux / antennes','64 canaux, mais peu de canaux actifs par antenne (7 antennes)','48 canaux, 13 antennes incluses'],
+          ['Gradients','35 mT/m · 140 T/m/s','33 mT/m · 130 T/m/s'],
+          ['Confort / applications','Système audio de relaxation','DeepRecon IA, capteur respiratoire intégré, audio-vidéo « ciel étoilé »'],
+          ['@','909 920 €','937 750 €']
+        ],
+        pc:[
+          {pros:['~28 000 € moins cher que United','Infrastructure GE mature de service et formation','Gradients légèrement plus puissants','Risque opérationnel plus faible (base installée)'],
+           cons:['Tunnel de 60 cm vs 70 cm','Moins d\u2019antennes incluses','Configuration présentée de manière moins transparente','Confort réduit pour patients claustrophobes / corpulents']},
+          {pros:['Tunnel de 70 cm — confort et accessibilité','48 canaux, 13 antennes — couverture corps entier (exigence Medima)','DeepRecon IA + large package clinique','Cage de Faraday, chiller, injecteur, installation, formation inclus'],
+           cons:['~28 000 € au-dessus de GE','Gradients légèrement inférieurs à GE','Capacité de service locale — à sécuriser par SLA']}
+        ]}
+    ]},
+  { title:'Mammographe', lead:'GE a proposé le Pristina VIA 3D dans le segment mid-end premium ; United a proposé le uMammo 870i, positionné comme DBT avancé — comparaison directe des deux offres.',
+    tiers:[
+      { tier:'Mid / high-end DBT', delta:-44770,
+        cols:[['GE','Pristina VIA 3D'],['UIH','uMammo 870i']],
+        rows:[
+          ['Tomosynthèse','3D standard','2D + 3D double angle'],
+          ['Pixel du détecteur','100 μm','76 μm — résolution théorique supérieure'],
+          ['Station de travail','Station d\u2019acquisition réglable','uWS-DBT GRACE + 2 moniteurs Barco'],
+          ['@','250 470 €','205 700 €']
+        ],
+        pc:[
+          {pros:['Plateforme éprouvée, bien connue des radiologues','Tomosynthèse 3D + Recon DL incluses','Écosystème mature de service et formation'],
+           cons:['~44 800 € plus cher que United','Détails limités sur le détecteur dans l\u2019offre','Prime de prix justifiée principalement par la marque']},
+          {pros:['Avantage financier le plus net du package : −44 770 €','Tomosynthèse double angle + station GRACE + 2 moniteurs Barco','Pixel 76 μm — meilleure visualisation des microcalcifications','Installation, formation, garantie de 24 mois incluses'],
+           cons:['Base installée européenne plus réduite','Paramètres du détecteur — à confirmer dans l\u2019annexe technique','Délais d\u2019intervention et pièces — à garantir contractuellement']}
+        ]}
+    ]}
+  ],
+  riskTag:'Risques', riskTitle:'Le risque principal et sa mitigation',
+  riskHead:'L\u2019organisation de service locale de United Imaging est immature',
+  riskBody:'L\u2019organisation de service locale de UIH est en cours de construction : les ingénieurs de terrain sont employés via des distributeurs locaux, et le support technique est assuré depuis la Pologne et le hub européen de Rotterdam. Une organisation locale directe est prévue pour le S2 2027. C\u2019est le contre-argument central au package United — mais il existe des solutions claires de mitigation, à traiter contractuellement.',
+  mitTitle:'Solutions claires de mitigation — à inclure au contrat',
+  mits:[
+    ['SLA contractuel','Disponibilité garantie, délais de réponse et pénalités pour chaque équipement.'],
+    ['Pièces & escalade','Stock local de pièces critiques et circuit d\u2019escalade défini au contrat.'],
+    ['Garantie 24 mois','Incluse dans les offres ; à articuler avec un contrat de maintenance post-garantie.'],
+    ['Négociation du package','Inclusion de l\u2019AI Auto Positioning (TEP-TDM) dans le prix.']
+  ],
+  recoTag:'Conclusion', recoTitle:'Recommandation de l\u2019équipe technique',
+  recoBody:'Sur la base de l\u2019analyse technique et financière, l\u2019équipe technique recommande le package intégral United Imaging : uMI 550 · uCT 780 · uMR 670 Evolve · uMammo 870i — 2 641 430 € en package complet, soit un dépassement de seulement ~3,4 % du budget CAPEX, pour un saut technologique significatif sur chaque modalité. Segment par segment, United gagne la comparaison directe en TEP-TDM high-end, en scanner mid et high-end et en mammographie ; en IRM, l\u2019écart de prix est marginal face aux avantages de configuration.',
+  recoItems:[
+    ['TEP numérique 24 cm','−336 380 € vs GE Omni Legend, avec AFOV et scanner supérieurs'],
+    ['Scanner 160 coupes','−50 820 € vs la configuration GE high-end, avec des performances nettement supérieures'],
+    ['IRM tunnel 70 cm','+27 830 € vs GE, pour 13 antennes, corps entier et DeepRecon'],
+    ['Mammographe −44 770 €','DBT double angle, GRACE, 2 moniteurs Barco']
+  ],
+  recoAlt:'<b>Les deux options de package United :</b><br>① L\u2019option recommandée, avec le uCT 780 (scanner 160 coupes) : <b>2 641 430 €</b> — soit 87 120 € (~3,4 %) au-dessus du budget.<br>② L\u2019option dans le budget, avec le uCT 550 (scanner 80 coupes) : <b>2 559 150 €</b> — soit seulement 4 840 € au-dessus du budget.<br>Pour comparaison : le package GE le moins cher encore en lice (Omni Legend + Revolution Altitude) coûte <b>2 982 650 €</b>, soit plus de 341 000 € de plus que même l\u2019option United recommandée.',
+  stepsTag:'Prochaines étapes', stepsTitle:'La suite',
+  steps:[
+    'Valider la direction : accord de principe sur United Imaging comme fournisseur.',
+    'Négociation contractuelle : SLA de service (disponibilité, pénalités, pièces, escalade), inclusion de l\u2019AI Auto Positioning.',
+    'Maintenir en parallèle la discussion avec Siemens — leur offre pourra être comparée à réception, sans bloquer la décision.',
+    'Contractualisation et planification de l\u2019installation.'
+  ],
+  footer:'Document interne Medima Health S.A. · Source : comparatif équipements et analyse pour/contre — A. Cîță, D. Moșneagu · Prix des équipements TVA incluse, hors coûts additionnels ; les totaux de package incluent les coûts additionnels selon l\u2019analyse CAPEX.'
+}
+};
+
+let currentLang = 'ro';
+let mobileView = false;
+let currentTab = 0;
+
+function fmtDelta(d, lang){
+  const s = (d>0?'+':'−') + Math.abs(d).toLocaleString(lang==='ro'?'ro-RO':(lang==='fr'?'fr-FR':'en-GB'));
+  return d>0 ? `<span class="delta-neg">${s} €</span>` : `<span class="delta-pos">${s} €</span>`;
+}
+function fmtEur(n, lang){
+  return n.toLocaleString(lang==='ro'?'ro-RO':(lang==='fr'?'fr-FR':'en-GB')) + ' €';
+}
+
+function render(){
+  const t = T[currentLang];
+  const maxTotal = Math.max(...PKG.map(p=>p.total));
+  const tags = [t.petTag, t.ctTag, t.mrTag, t.mgTag];
+
+  const loc = currentLang==='ro'?'ro-RO':(currentLang==='fr'?'fr-FR':'en-GB');
+  const barHead = `<div class="bar-row bar-head">
+      <div>${t.pkgColCfg}</div>
+      <div>${t.pkgColName}</div><div></div>
+      <div>${t.pkgColVal}</div>
+      <div>${t.pkgColDelta}</div>
+      <div>${t.pkgColPct}</div>
+    </div>`;
+  const bars = barHead + PKG.map(p=>{
+    const w = Math.round(p.total/maxTotal*100);
+    const d = p.total - BUDGET;
+    const pct = d/BUDGET*100;
+    const pctStr = (pct>0?'+':'−') + Math.abs(pct).toLocaleString(loc,{minimumFractionDigits:1,maximumFractionDigits:1}) + '%';
+    return `<div class="bar-row">
+      <div class="bar-tier${p.tier==='High-end'?' hi':''}">${p.tier}</div>
+      <div class="bar-name">${p.name}<span class="bar-models">${p.models}</span></div>
+      <div class="bar-track"><div class="bar-fill${p.uih?' uih':''}" style="width:${w}%"></div></div>
+      <div class="bar-val">${fmtEur(p.total,currentLang)}</div>
+      <div class="bar-delta">${fmtDelta(d,currentLang)}</div>
+      <div class="bar-pct ${pct>0?'delta-neg':'delta-pos'}">${pctStr}</div>
+    </div>`;
+  }).join('');
+
+  const modSections = t.modalities.map((m,i)=>{
+    const tierBlocks = m.tiers.map(tier=>{
+      const headCells = tier.cols.map(c=>{
+        const isU = c[0]==='UIH';
+        return `<th class="${isU?'uih-col':''}">${c[0]}<span class="vendor-model">${c[1]}</span></th>`;
+      }).join('');
+      const bodyRows = tier.rows.map(r=>{
+        const price = r[0]==='@';
+        const label = price ? t.priceRowLbl : r[0];
+        const cells = r.slice(1).map(v=>`<td>${v}</td>`).join('');
+        return `<tr class="${price?'price-row':''}"><td class="rowlabel">${label}</td>${cells}</tr>`;
+      }).join('');
+      const pcCards = tier.pc.map((pc,ci)=>{
+        const c = tier.cols[ci];
+        const isU = c[0]==='UIH';
+        const pros = pc.pros.map(x=>`<li class="p">${x}</li>`).join('');
+        const cons = pc.cons.map(x=>`<li class="c">${x}</li>`).join('');
+        return `<div class="pc-card${isU?' uih':''}">
+          <h4>${c[0]} ${c[1]}<small>${t.proLbl} / ${t.conLbl}</small></h4>
+          <ul class="pc-list">${pros}${cons}</ul>
+        </div>`;
+      }).join('');
+      const deltaBadge = (typeof tier.delta === 'number')
+        ? `<span class="tier-delta ${tier.delta<0?'pos':'neg'}">UIH vs GE: ${fmtDelta(tier.delta,currentLang).replace(/<[^>]+>/g,'')} ${tier.delta<0?'▼':'▲'}</span>`
+        : '';
+      const soloNote = tier.solo ? `<p class="tier-note">${t.soloNote}</p>` : '';
+      return `<div class="tier-head">
+          <span class="tier-badge${tier.solo?' solo':''}">${tier.tier}</span>${deltaBadge}
+        </div>
+        ${soloNote}
+        <div class="table-scroll"><table>
+          <thead><tr><th>${t.specLbl}</th>${headCells}</tr></thead>
+          <tbody>${bodyRows}</tbody>
+        </table></div>
+        <div class="pc-grid">${pcCards}</div>`;
+    }).join('');
+    return `<section id="mod${i}">
+      <div class="sec-head"><span class="sec-tag">${tags[i]}</span><h2>${m.title}</h2></div>
+      <p class="lead">${m.lead}</p>
+      <p class="price-note">${t.priceNote}</p>
+      ${tierBlocks}
+    </section>`;
+  });
+
+  const panels = [
+    `<div class="hero">
+      <img class="hero-logo" src="data:image/png;base64,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" alt="Medima">
+      <span class="eyebrow">${t.eyebrow}</span>
+      <h1>${t.title}</h1>
+      <p class="sub">${t.sub}</p>
+      <div class="meta"><span><b>${t.meta1}</b></span><span>${t.meta2}</span><span>${t.meta3}</span></div>
+    </div>
+    <section>
+      <div class="sec-head"><span class="sec-tag">${t.ctxTag}</span><h2>${t.ctxTitle}</h2></div>
+      <p class="lead">${t.ctxLead}</p>
+      <div class="ctx-grid">${t.ctxCards.map(c=>`<div class="ctx-card"><div class="num">${c[0]}</div><div class="lbl">${c[1]}</div></div>`).join('')}</div>
+      <div class="note">${t.ctxNote}</div>
+    </section>`,
+
+    `<section>
+      <div class="sec-head"><span class="sec-tag">${t.pkgTag}</span><h2>${t.pkgTitle}</h2></div>
+      <p class="lead">${t.pkgLead}</p>
+      <p class="price-note">${t.pkgNote}</p>
+      <p class="budget-line">${t.budgetLbl} <b>${fmtEur(BUDGET,currentLang)}</b> · ${t.deltaLbl} ↓</p>
+      <div class="chart">${bars}</div>
+    </section>`,
+
+    modSections[0],
+    modSections[1],
+    modSections[2],
+    modSections[3],
+
+    `<section>
+      <div class="sec-head"><span class="sec-tag">${t.riskTag}</span><h2>${t.riskTitle}</h2></div>
+      <div class="risk-box"><h3>${t.riskHead}</h3><p>${t.riskBody}</p></div>
+      <div class="mit-wrap">
+        <h3>${t.mitTitle}</h3>
+        <div class="mit-grid">${t.mits.map(m=>`<div class="mit-card"><b>${m[0]}</b>${m[1]}</div>`).join('')}</div>
+      </div>
+    </section>`,
+
+    `<section>
+      <div class="reco">
+        <span class="tag">${t.recoTag}</span>
+        <h2>${t.recoTitle}</h2>
+        <p>${t.recoBody}</p>
+        <div class="reco-grid">${t.recoItems.map(r=>`<div class="reco-item"><b>${r[0]}</b><span>${r[1]}</span></div>`).join('')}</div>
+        <div class="alt">${t.recoAlt}</div>
+      </div>
+    </section>
+    <section>
+      <div class="sec-head"><span class="sec-tag">${t.stepsTag}</span><h2>${t.stepsTitle}</h2></div>
+      <div class="steps">${t.steps.map(s=>`<div class="step"><div>${s}</div></div>`).join('')}</div>
+    </section>`
+  ];
+
+  const tabBar = `<div class="tabbar" role="tablist">${t.tabs.map((tb,i)=>`<button class="tab${i===currentTab?' active':''}" role="tab" aria-selected="${i===currentTab}" onclick="setTab(${i})">${tb}</button>`).join('')}</div>`;
+
+  document.getElementById('app').innerHTML =
+    tabBar +
+    panels.map((p,i)=>`<div class="tab-panel${i===currentTab?' active':''}" role="tabpanel">${p}</div>`).join('') +
+    `<footer>${t.footer}</footer>`;
+
+  document.querySelectorAll('.lang-switch button').forEach(b=>{
+    b.classList.toggle('active', b.dataset.lang===currentLang);
+  });
+  document.getElementById('vtLabel').textContent = mobileView ? T[currentLang].vtDesk : T[currentLang].vtMob;
+  document.documentElement.lang = currentLang;
+}
+
+function setLang(l){ currentLang = l; render(); }
+function setTab(i){
+  currentTab = i;
+  document.querySelectorAll('.tab').forEach((b,bi)=>{ b.classList.toggle('active', bi===i); b.setAttribute('aria-selected', bi===i); });
+  document.querySelectorAll('.tab-panel').forEach((p,pi)=>p.classList.toggle('active', pi===i));
+  window.scrollTo({top:0, behavior:'auto'});
+}
+function unlock(){
+  const inp = document.getElementById('gatePass');
+  if(inp.value === 'Medima2027'){
+    document.getElementById('gate').style.display = 'none';
+    document.body.classList.remove('locked');
+  } else {
+    inp.classList.remove('err'); void inp.offsetWidth; inp.classList.add('err');
+    document.getElementById('gateErr').style.display = 'block';
+    inp.select();
+  }
+}
+function toggleView(){
+  mobileView = !mobileView;
+  document.body.classList.toggle('force-mobile', mobileView);
+  document.getElementById('viewToggle').classList.toggle('on', mobileView);
+  document.getElementById('vtLabel').textContent = mobileView ? T[currentLang].vtDesk : T[currentLang].vtMob;
+}
+
+render();
+</script>
+</body>
+</html>
