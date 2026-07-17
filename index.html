@@ -80,7 +80,7 @@ section{padding:34px 0 8px}
 
 /* package chart */
 .chart{margin-top:10px}
-.bar-row{display:grid;grid-template-columns:112px minmax(200px,350px) 1fr 108px 104px 92px;gap:14px;align-items:center;padding:10px 0;border-bottom:1px dashed var(--line);font-size:13.5px}
+.bar-row{display:grid;grid-template-columns:112px minmax(185px,330px) 1fr 100px 100px 98px 84px;gap:14px;align-items:center;padding:10px 0;border-bottom:1px dashed var(--line);font-size:13.5px}
 .bar-tier{font-family:'Red Hat Display';font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;text-align:center;border-radius:8px;padding:5px 6px;background:#F1EDFB;color:var(--primary);white-space:nowrap}
 .bar-tier.hi{background:var(--primary);color:#fff}
 .bar-row:last-child{border-bottom:none}
@@ -245,13 +245,13 @@ ro: {
   pkgLead:'Valoarea totală a fiecărei configurații complete (PET-CT + CT + RM + mamograf), raportată la bugetul CAPEX. Calculele exclud HotLab-ul (205.700 EUR, dedus din oferte).',
   budgetLbl:'Buget CAPEX de referință:',
   deltaLbl:'Diferență',
-  pkgColCfg:'Nivel config.', pkgColName:'Pachet', pkgColVal:'Valoare', pkgColDelta:'Diferență', pkgColPct:'% vs CAPEX',
+  pkgColCfg:'Nivel config.', pkgColName:'Pachet', pkgColVal:'Cu TVA', pkgColValEx:'Fără TVA', pkgColDelta:'Diferență', pkgColPct:'% vs CAPEX', vatInclLbl:'cu TVA', vatExclLbl:'fără TVA',
   pkgNote:'Configurațiile bazate pe GE Discovery IQ au fost eliminate — sistemul a ieșit din producție. Fiecare pachet include RM 1.5T și mamograful furnizorului respectiv.',
   petTag:'1 · PET-CT', ctTag:'2 · CT', mrTag:'3 · RM 1.5T', mgTag:'4 · Mamograf',
   proLbl:'Puncte forte', conLbl:'Puncte slabe',
   specLbl:'Specificație',
-  priceRowLbl:'Preț echipament (TVA inclus)',
-  priceNote:'Prețuri de echipament cu TVA inclus, fără costuri adiționale (amenajări, ecranare, HotLab).',
+  priceRowLbl:'Preț echipament (cu TVA)', priceRowLblEx:'Preț echipament (fără TVA)',
+  priceNote:'Prețuri de echipament fără costuri adiționale (amenajări, ecranare, HotLab). Cota TVA România: 21%.',
   soloNote:'United Imaging nu a ofertat un sistem în acest segment.',
   modalities:[
   { title:'PET-CT', lead:'Sistemul aprobat inițial în Board, GE Discovery IQ 3R (low-end, analogic), a ieșit din producție și a fost exclus din comparație. Decizia se ia între cele două platforme digitale high-end ofertate.',
@@ -390,13 +390,13 @@ en: {
   pkgLead:'Total value of each complete configuration (PET-CT + CT + MRI + mammography) against the CAPEX budget. Figures exclude the HotLab (€205,700, already deducted from the offers).',
   budgetLbl:'Reference CAPEX budget:',
   deltaLbl:'Difference',
-  pkgColCfg:'Config. level', pkgColName:'Package', pkgColVal:'Value', pkgColDelta:'Difference', pkgColPct:'% vs CAPEX',
+  pkgColCfg:'Config. level', pkgColName:'Package', pkgColVal:'Incl. VAT', pkgColValEx:'Excl. VAT', pkgColDelta:'Difference', pkgColPct:'% vs CAPEX', vatInclLbl:'incl. VAT', vatExclLbl:'excl. VAT',
   pkgNote:'Configurations based on the GE Discovery IQ have been removed — the system has been discontinued. Each package includes the respective vendor\u2019s 1.5T MRI and mammography system.',
   petTag:'1 · PET-CT', ctTag:'2 · CT', mrTag:'3 · 1.5T MRI', mgTag:'4 · Mammography',
   proLbl:'Strengths', conLbl:'Weaknesses',
   specLbl:'Specification',
-  priceRowLbl:'Equipment price (VAT incl.)',
-  priceNote:'Equipment prices incl. VAT, excluding additional costs (site works, shielding, HotLab).',
+  priceRowLbl:'Equipment price (incl. VAT)', priceRowLblEx:'Equipment price (excl. VAT)',
+  priceNote:'Equipment prices excluding additional costs (site works, shielding, HotLab). Romanian VAT rate: 21%.',
   soloNote:'United Imaging did not quote a system in this segment.',
   modalities:[
   { title:'PET-CT', lead:'The system originally approved by the Board, the GE Discovery IQ 3R (low-end, analog), has been discontinued and was excluded from the comparison. The decision is between the two quoted high-end digital platforms.',
@@ -535,13 +535,13 @@ fr: {
   pkgLead:'Valeur totale de chaque configuration complète (TEP-TDM + scanner + IRM + mammographe) par rapport au budget CAPEX. Les calculs excluent le HotLab (205 700 €, déjà déduit des offres).',
   budgetLbl:'Budget CAPEX de référence :',
   deltaLbl:'Écart',
-  pkgColCfg:'Niveau config.', pkgColName:'Package', pkgColVal:'Valeur', pkgColDelta:'Écart', pkgColPct:'% vs CAPEX',
+  pkgColCfg:'Niveau config.', pkgColName:'Package', pkgColVal:'TTC', pkgColValEx:'HT', pkgColDelta:'Écart', pkgColPct:'% vs CAPEX', vatInclLbl:'TTC', vatExclLbl:'HT',
   pkgNote:'Les configurations basées sur le GE Discovery IQ ont été retirées — le système est sorti de production. Chaque package inclut l\u2019IRM 1,5 T et le mammographe du fournisseur respectif.',
   petTag:'1 · TEP-TDM', ctTag:'2 · Scanner', mrTag:'3 · IRM 1,5 T', mgTag:'4 · Mammographe',
   proLbl:'Points forts', conLbl:'Points faibles',
   specLbl:'Spécification',
-  priceRowLbl:'Prix équipement (TVA incluse)',
-  priceNote:'Prix des équipements TVA incluse, hors coûts additionnels (aménagements, blindage, HotLab).',
+  priceRowLbl:'Prix équipement (TTC)', priceRowLblEx:'Prix équipement (HT)',
+  priceNote:'Prix des équipements hors coûts additionnels (aménagements, blindage, HotLab). Taux de TVA en Roumanie : 21 %.',
   soloNote:'United Imaging n\u2019a pas proposé de système dans ce segment.',
   modalities:[
   { title:'TEP-TDM', lead:'Le système initialement approuvé par le Board, le GE Discovery IQ 3R (low-end, analogique), est sorti de production et a été exclu de la comparaison. La décision se joue entre les deux plateformes numériques high-end proposées.',
@@ -679,10 +679,12 @@ function render(){
   const tags = [t.petTag, t.ctTag, t.mrTag, t.mgTag];
 
   const loc = currentLang==='ro'?'ro-RO':(currentLang==='fr'?'fr-FR':'en-GB');
+  const exVat = n => Math.round(n/1.21);
   const barHead = `<div class="bar-row bar-head">
       <div>${t.pkgColCfg}</div>
       <div>${t.pkgColName}</div><div></div>
       <div>${t.pkgColVal}</div>
+      <div>${t.pkgColValEx}</div>
       <div>${t.pkgColDelta}</div>
       <div>${t.pkgColPct}</div>
     </div>`;
@@ -696,6 +698,7 @@ function render(){
       <div class="bar-name">${p.name}<span class="bar-models">${p.models}</span></div>
       <div class="bar-track"><div class="bar-fill${p.uih?' uih':''}" style="width:${w}%"></div></div>
       <div class="bar-val">${fmtEur(p.total,currentLang)}</div>
+      <div class="bar-val">${fmtEur(exVat(p.total),currentLang)}</div>
       <div class="bar-delta">${fmtDelta(d,currentLang)}</div>
       <div class="bar-pct ${pct>0?'delta-neg':'delta-pos'}">${pctStr}</div>
     </div>`;
@@ -709,9 +712,20 @@ function render(){
       }).join('');
       const bodyRows = tier.rows.map(r=>{
         const price = r[0]==='@';
-        const label = price ? t.priceRowLbl : r[0];
+        if(price){
+          const incl = r.slice(1).map((v,vi)=>{
+            const n = parseInt(String(v).replace(/[^0-9]/g,''),10);
+            return `<td data-v="${tier.cols[vi][0]} ${tier.cols[vi][1]}">${n.toLocaleString(loc)} €</td>`;
+          }).join('');
+          const excl = r.slice(1).map((v,vi)=>{
+            const n = parseInt(String(v).replace(/[^0-9]/g,''),10);
+            return `<td data-v="${tier.cols[vi][0]} ${tier.cols[vi][1]}">${exVat(n).toLocaleString(loc)} €</td>`;
+          }).join('');
+          return `<tr class="price-row"><td class="rowlabel">${t.priceRowLbl}</td>${incl}</tr>
+                  <tr class="price-row"><td class="rowlabel">${t.priceRowLblEx}</td>${excl}</tr>`;
+        }
         const cells = r.slice(1).map((v,vi)=>`<td data-v="${tier.cols[vi][0]} ${tier.cols[vi][1]}">${v}</td>`).join('');
-        return `<tr class="${price?'price-row':''}"><td class="rowlabel">${label}</td>${cells}</tr>`;
+        return `<tr><td class="rowlabel">${r[0]}</td>${cells}</tr>`;
       }).join('');
       const pcCards = tier.pc.map((pc,ci)=>{
         const c = tier.cols[ci];
@@ -763,7 +777,7 @@ function render(){
       <div class="sec-head"><span class="sec-tag">${t.pkgTag}</span><h2>${t.pkgTitle}</h2></div>
       <p class="lead">${t.pkgLead}</p>
       <p class="price-note">${t.pkgNote}</p>
-      <p class="budget-line">${t.budgetLbl} <b>${fmtEur(BUDGET,currentLang)}</b> · ${t.deltaLbl} ↓</p>
+      <p class="budget-line">${t.budgetLbl} <b>${fmtEur(BUDGET,currentLang)}</b> (${t.vatInclLbl}) · <b>${fmtEur(exVat(BUDGET),currentLang)}</b> (${t.vatExclLbl})</p>
       <div class="chart">${bars}</div>
     </section>`,
 
